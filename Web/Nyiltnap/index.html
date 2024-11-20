@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kandó Kálmán Informatikai Technikum - Nyílt Nap</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="calc.css">
+</head>
+<body>
+    <!-- Fejléc -->
+    <header>
+        <div class="logo">
+            <img src="thumbnail_kando_logo_04c6847e41.png" alt="Kandó Kálmán Informatikai Technikum logó">
+        </div>
+        <h1>Kandó Kálmán Informatikai Technikum</h1>
+        <h2>Nyílt Nap</h2>
+    </header>
+
+    <!-- Tartalom -->
+    <main>
+        <section class="welcome">
+            <h3>Üdvözlünk a Nyílt Napon!</h3>
+            <p>Ez az oldal a mai előadásunk bemutatásához készült. Itt fogjuk elkészíteni a programozási feladatot, és megmutatjuk, hogyan dolgozunk HTML, CSS és JavaScript segítségével.</p>
+        </section>
+
+        <section class="demo">
+            <h3>Elkészült Feladat</h3>
+            <div class="output-area">
+                <!-- Ide kerül majd a számológép -->
+                <div class="calculator">
+                    <!-- Kijelző -->
+                    <input type="text" id="display" readonly>
+            
+                    <!-- Gombok -->
+                    <div class="buttons">
+                        <!-- Számok -->
+                        <button onclick="appendNumber('7')">7</button>
+                        <button onclick="appendNumber('8')">8</button>
+                        <button onclick="appendNumber('9')">9</button>
+                        <button onclick="setOperation('/')">/</button>
+            
+                        <button onclick="appendNumber('4')">4</button>
+                        <button onclick="appendNumber('5')">5</button>
+                        <button onclick="appendNumber('6')">6</button>
+                        <button onclick="setOperation('*')">*</button>
+            
+                        <button onclick="appendNumber('1')">1</button>
+                        <button onclick="appendNumber('2')">2</button>
+                        <button onclick="appendNumber('3')">3</button>
+                        <button onclick="setOperation('-')">-</button>
+            
+                        <button onclick="appendNumber('0')">0</button>
+                        <button onclick="clearDisplay()">C</button>
+                        <button onclick="calculate()">=</button>
+                        <button onclick="setOperation('+')">+</button>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Lábléc -->
+    <footer>
+        <p>&copy; 2024 Kandó Kálmán Informatikai Technikum</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>

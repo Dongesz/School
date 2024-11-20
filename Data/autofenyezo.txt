@@ -1,0 +1,59 @@
+
+DROP DATABASE IF EXISTS `veznevosztaly_autofenyezo`;
+
+
+CREATE DATABASE IF NOT EXISTS `veznevosztaly_autofenyezo`
+CHARACTER SET utf8
+COLLATE utf8_hungarian_ci;
+
+
+USE `veznevosztaly_autofenyezo`;
+
+-- Autók tábla létrehozása
+CREATE TABLE Autok (
+    Rendszam VARCHAR(10) PRIMARY KEY NOT NULL,  
+    Tipus VARCHAR(50) NOT NULL,               
+    Evjarat INT NOT NULL,                    
+    Szinkod VARCHAR(10) NOT NULL,             
+    Szemigszam VARCHAR(15)                    
+);
+
+
+CREATE TABLE Szinek (
+    Szinkod VARCHAR(10) PRIMARY KEY NOT NULL,  
+    Szin VARCHAR(50) NOT NULL                 
+);
+
+
+INSERT INTO Szinek (Szinkod, Szin)
+VALUES
+('BG43', 'Beige'),
+('DR02', 'Drapp'),
+('FH05', 'Fehér'),
+('PR02', 'Piros'),
+('ZL05', 'Zöld');
+
+
+INSERT INTO Autok (Rendszam, Tipus, Evjarat, Szinkod, Szemigszam)
+VALUES
+('ABC-123', 'Trabant', 1976, 'FH05', 'AJ-123-456'),
+('DVA-204', 'Skoda', 1987, 'DR02', 'BK-654-321'),
+('ICC-041', 'Ford', 1993, 'BG43', 'VII-555-555'),
+('DEF-543', 'Lada', 1985, 'ZL05', 'BC-432-567'),
+('BFC-746', 'Lada', 1982, 'PR02', 'BK-654-321'),
+-- 15 további rekord (példa)
+('XYZ-999', 'Opel', 1990, 'BG43', NULL),
+('MNO-555', 'Volkswagen', 1991, 'FH05', NULL),
+('JKL-222', 'Audi', 1988, 'PR02', NULL),
+('LMN-333', 'BMW', 1995, 'DR02', NULL),
+('PQR-444', 'Mercedes', 1996, 'ZL05', NULL),
+('STU-777', 'Renault', 1992, 'BG43', NULL),
+('VWX-888', 'Peugeot', 1997, 'FH05', NULL),
+('EFG-000', 'Toyota', 1983, 'PR02', NULL),
+('HIJ-111', 'Honda', 1984, 'DR02', NULL),
+('KLM-222', 'Hyundai', 1986, 'ZL05', NULL),
+('NOP-333', 'Mazda', 1989, 'BG43', NULL),
+('QRS-444', 'Chevrolet', 1994, 'FH05', NULL),
+('TUV-555', 'Fiat', 1982, 'PR02', NULL),
+('UVW-666', 'Kia', 1991, 'DR02', NULL),
+('XYZ-777', 'Subaru', 1993, 'ZL05', NULL);
